@@ -1,0 +1,63 @@
+{
+    "name": "shinseiki86/sgh",
+    "description": "Multas",
+    "keywords": ["framework", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "repositories": [],
+    "require": {
+        "php": ">=5.5.9",
+        "laravel/framework": "5.2.*",
+        "zizaco/entrust": "5.2.x-dev",
+        "nesbot/carbon": "~1.14",
+        "laracasts/flash": "~1.3",
+        "laravelcollective/html": "5.2.*",
+        "felixkiss/uniquewith-validator": "^3.1",
+        "doctrine/dbal": "~2.3",
+        "owen-it/laravel-auditing": "^4.1"
+    },
+    "require-dev": {
+        "fzaninotto/faker": "~1.4",
+        "mockery/mockery": "0.9.*",
+        "phpunit/phpunit": "~5.0",
+        "symfony/css-selector": "2.8.*|3.0.*",
+        "symfony/dom-crawler": "2.8.*|3.0.*",
+        "codeception/codeception": "^2.2",
+        "barryvdh/laravel-debugbar": "^2.4"
+    },
+    "autoload": {
+        "classmap": [
+            "database"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "classmap": [
+            "tests/TestCase.php"
+        ],
+        "files": [
+            "app/Http/helpers.php"
+        ]
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"copy('.env.pgsql', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ],
+        "post-install-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postInstall",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "Illuminate\\Foundation\\ComposerScripts::postUpdate",
+            "php artisan optimize"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    }
+}

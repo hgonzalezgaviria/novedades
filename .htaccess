@@ -1,0 +1,5 @@
+# Don't listing directory
+	#Options -Indexes
+	#Options -MultiViews
+	IndexIgnore *
+	#ErrorDocument 403 /public/index.php
