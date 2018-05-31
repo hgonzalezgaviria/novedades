@@ -26,7 +26,7 @@ class CreateVacantesTable extends Migration
             $table->dateTime('VACA_FECHAFIN')->nullable();
              $table->string('VACA_REQUISITOS', 500)->comment('Nombre del propietario');
              $table->string('VACA_PROGRAMA', 300)->comment('Nombre del propietario');
-            $table->string('VACA_ARCHIVO', 500)->nullable();
+            $table->double('VACA_SALARIO', 12,2 )->nullable();
 
             $table->boolean('VACA_ESTADO');
             

@@ -22,6 +22,12 @@
 		@include('widgets.forms.input', ['type'=>'date', 'column'=>3, 'name'=>'VACA_FECHAFIN', 'label'=>'Fecha fin' ])
 	</div>
 
+	<div class="row">
+		
+		@include('widgets.forms.input', ['type'=>'number', 'column'=>4, 'name'=>'VACA_SALARIO', 'label'=>'Salario', 'options'=>['size' => '99999999999999' ] ])
+		
+	</div>
+
 	<!-- Botones -->
 	@include('widgets.forms.buttons', ['url' => 'core/vacantes'])
 

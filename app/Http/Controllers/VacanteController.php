@@ -52,8 +52,8 @@ class VacanteController extends Controller
 							'VACA_FECHAINICIO',
 							'VACA_FECHAFIN',
 							'VACA_REQUISITOS',
-							'VACA_PROGRAMA',														
-							'VACA_ARCHIVO',
+							'VACA_PROGRAMA',													
+							'VACA_SALARIO',
 							'VACA_ESTADO',							
 						])->get();
 		
@@ -168,7 +168,8 @@ class VacanteController extends Controller
 							'VACA_FECHAINICIO',
 							'VACA_FECHAFIN',
 							'VACA_REQUISITOS',
-							'VACA_PROGRAMA',						
+							'VACA_PROGRAMA',
+							'VACA_SALARIO',						
 						])->get()->toJson();
 		
 	}
@@ -187,6 +188,7 @@ class VacanteController extends Controller
 							'VACA_PROGRAMA',
 							'EMPR_LATITUD',
 							'EMPR_LOGITUD',
+							'VACA_SALARIO',
 						])->get()->toJson();
 		
 	}
@@ -272,6 +274,7 @@ class VacanteController extends Controller
 							'PROP_CEDULA',
 							'PROP_NOMBRE',
 							'PROP_CORREO',
+							'VACA_SALARIO',
 
 						])->where('PROPIETARIOS.PROP_ID', $user)
 						->get()->toJson();

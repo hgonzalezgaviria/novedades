@@ -22,7 +22,7 @@ class Vacante extends ModelWithSoftDeletes
 		'VACA_FECHAFIN',
 		'VACA_REQUISITOS',
 		'VACA_PROGRAMA',
-		'VACA_ARCHIVO',	
+		'VACA_SALARIO',	
 		'VACA_ESTADO',	
 		'EMPR_ID',
 	];
