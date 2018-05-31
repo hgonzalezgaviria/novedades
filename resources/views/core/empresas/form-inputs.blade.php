@@ -3,9 +3,9 @@
 	<div class="row">
 		@include('widgets.forms.input', ['type'=>'text', 'column'=>8, 'name'=>'EMPR_DESCRIPCION', 'label'=>'Descripción', 'options'=>['maxlength' => '300', 'required'] ])
 		@if(current_route_action() == 'create')
-			@include('widgets.forms.input', ['type'=>'select', 'column'=>4, 'name'=>'	EMPR_ESTADO', 'label'=>'Estado', 'data'=>[1=>'ACTIVO',0=>'INACTIVO'] , 'value'=>1, 'class'=>'readonly'])
+			@include('widgets.forms.input', ['type'=>'select', 'column'=>4, 'name'=>'EMPR_ESTADO', 'label'=>'Estado', 'data'=>[1=>'ACTIVO',0=>'INACTIVO'] , 'value'=>1, 'class'=>'readonly'])
 		@else
-			@include('widgets.forms.input', ['type'=>'select', 'column'=>4, 'name'=>'	EMPR_ESTADO', 'label'=>'Estado', 'data'=>[1=>'ACTIVO',0=>'INACTIVO']])
+			@include('widgets.forms.input', ['type'=>'select', 'column'=>4, 'name'=>'EMPR_ESTADO', 'label'=>'Estado', 'data'=>[1=>'ACTIVO',0=>'INACTIVO']])
 		@endif
 	</div>
 

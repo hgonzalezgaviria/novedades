@@ -44,5 +44,29 @@ class VacantesTableSeeder extends Seeder
             
         ]);
         
+
+           Vacante::create([
+            'EMPR_ID'=>4,
+            'VACA_FECHAINICIO'=>'2018-06-15',
+            'VACA_FECHAFIN'=>'2018-07-01',
+            'VACA_REQUISITOS'=>'Labores del cargo:
+Diseño de soluciones para sitios de alta concurrencia
+Definición de arquitectura para aplicaciones front end, microservicios usualmente con APIs REST.
+Desarrollo de componentes de software utilizando Spring Framework
+Desarrollo de aplicaciones utilizando AngularJS
+Desarrollo de componentes front end utilizando HTML5, CSS3 y Javascript
+Trabajar de la mano de otros profesionales para mejorar la experiencia de los usuarios.
+
+Requisitos:
+Conocimientos en lenguaje de Programación Java
+Servicios web XML o JSON.
+Mínimo 1 año de experiencia comprobable en proyectos de desarrollo de aplicaciones web 
+Conocimientos sólidos en arquitectura de software y programación orientada a objetos.
+Tener un Grado de Ingeniero de Sistemas, Electrónico, Mecatrónica, Automatización o profesional que se adapte al perfil Interés en tecnologías de cara al usuario (UX)
+Indispensable: HTML5, Javascript, CSS3',
+            'VACA_PROGRAMA'=>'Tecnología en Sistemas',           
+            'VACA_ESTADO'=>true,
+            
+        ]);
     }
 }

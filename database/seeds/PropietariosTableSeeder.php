@@ -18,7 +18,7 @@ class PropietariosTableSeeder extends Seeder
             'PROP_NOMBRE'    => 'HECTOR',
             'PROP_APELLIDO'  => 'GONZALEZ',
             'PROP_CORREO' => 'hfg@gmail.com',
-            'PROP_PASS' => '123',
+            'PROP_PASS' => 'zxcvbnm1',
             'PROP_CREADOPOR' => 'PRUEBA',
         ]);
 
@@ -36,7 +36,7 @@ class PropietariosTableSeeder extends Seeder
             'PROP_NOMBRE'    => 'KEVIN',
             'PROP_APELLIDO'  => 'RODRIGUEZ',
             'PROP_CORREO' => 'kr@gmail.com',
-            'PROP_PASS' => 'zxcvbnm1',
+            'PROP_PASS' => '123456',
             'PROP_CREADOPOR' => 'PRUEBA',
         ]);
     }

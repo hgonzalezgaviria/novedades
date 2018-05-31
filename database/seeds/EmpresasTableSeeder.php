@@ -37,6 +37,16 @@ class EmpresasTableSeeder extends Seeder
             'EMPR_ESTADO'=>true,
             
         ]);
+
+           
+           Empresa::create([
+              'EMPR_DESCRIPCION'=>'Fundación Centro Colombiano de Estudios Profesionales',
+            'EMPR_LATITUD'=>3.429579,
+            'EMPR_LOGITUD'=>-76.535017,
+            'EMPR_DIRECCION'=>'Cl. 9b #29a67, Cali, Valle del Cauca',
+            'EMPR_ESTADO'=>true,
+            
+        ]);
         
     }
 }

@@ -18,7 +18,7 @@
 
 		<div class="row">
 		
-		@include('widgets.forms.input', ['type'=>'date', 'column'=>3, 'name'=>'	VACA_FECHAINICIO', 'label'=>'Fecha inicio' ])
+		@include('widgets.forms.input', ['type'=>'date', 'column'=>3, 'name'=>'VACA_FECHAINICIO', 'label'=>'Fecha inicio' ])
 		@include('widgets.forms.input', ['type'=>'date', 'column'=>3, 'name'=>'VACA_FECHAFIN', 'label'=>'Fecha fin' ])
 	</div>
 
