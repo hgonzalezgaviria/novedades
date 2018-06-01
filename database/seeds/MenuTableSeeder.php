@@ -93,7 +93,7 @@ class MenuTableSeeder extends Seeder
 		Menu::create([
 			'MENU_LABEL' => 'Empresas',
 			'MENU_URL' => 'core/empresas',
-			'MENU_ICON' => 'fa-credit-card-alt',
+			'MENU_ICON' => 'fa-building',
 			'MENU_ORDER' => $orderMenuTop++,
 			'MENU_POSITION' => 'TOP',
 			'PERM_ID' => $this->getPermission('empresa-index'),
@@ -102,10 +102,17 @@ class MenuTableSeeder extends Seeder
 			Menu::create([
 			'MENU_LABEL' => 'Vacantes',
 			'MENU_URL' => 'core/vacantes',
-			'MENU_ICON' => 'fa-credit-card-alt',
+			'MENU_ICON' => 'fa-group',
 			'MENU_ORDER' => $orderMenuTop++,
 			'MENU_POSITION' => 'TOP',
 			'PERM_ID' => $this->getPermission('vacante-index'),
+		]);	Menu::create([
+			'MENU_LABEL' => 'Postulaciones',
+			'MENU_URL' => 'core/postulaciones',
+			'MENU_ICON' => 'fa-product-hunt',
+			'MENU_ORDER' => $orderMenuTop++,
+			'MENU_POSITION' => 'TOP',
+			'PERM_ID' => $this->getPermission('postulacione-index'),
 		]);
 
 		

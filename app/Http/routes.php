@@ -43,6 +43,7 @@ Route::group(['prefix'=>'core', 'middleware'=>'auth'], function() {
 	Route::resource('empresas', 'EmpresaController', ['except'=>['show'], 'parameters'=>['empresa'=>'EMPR_ID']]);
 		
 	Route::resource('vacantes', 'VacanteController', ['except'=>['show'], 'parameters'=>['vacante'=>'VACA_ID']]);
+	Route::resource('postulaciones', 'PostulacioneController', ['except'=>['show'], 'parameters'=>['postulacione'=>'POST_ID']]);
 });
 
 

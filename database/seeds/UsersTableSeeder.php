@@ -69,6 +69,7 @@ use App\Models\Permission;
                 $this->createPermissions(Propietario::class, 'propietarios');
                 $this->createPermissions(Vacante::class, 'vacantes');
                 $this->createPermissions(Empresa::class, 'empresas');                
+                $this->createPermissions(Postulacione::class, 'postulaciones'); 
             
 
                 
