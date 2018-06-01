@@ -83,7 +83,7 @@ class MenuTableSeeder extends Seeder
 		
 		//TOP
 		Menu::create([
-			'MENU_LABEL' => 'Propietarios',
+			'MENU_LABEL' => 'Usuarios',
 			'MENU_URL' => 'core/propietarios',
 			'MENU_ICON' => 'fa-address-card',
 			'MENU_ORDER' => $orderMenuTop++,

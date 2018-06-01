@@ -1,6 +1,6 @@
 @extends('layouts.menu')
 
-@section('page_heading', 'Nuevo Propietario')
+@section('page_heading', 'Nuevo usuario')
 
 @section('section')
 {{ Form::open(['route' => 'core.propietarios.store', 'class' => 'form-horizontal']) }}
