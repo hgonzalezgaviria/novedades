@@ -3,7 +3,7 @@
 <div class='col-md-8 col-md-offset-2'>
 	<div class="row">
 		@include('widgets.forms.input', ['type'=>'select', 'column'=>4, 'name'=>'EMPR_ID', 'label'=>'Empresa', 'data'=>$getArrEmpresas ])
-			@include('widgets.forms.input', ['type'=>'select', 'column'=>4, 'name'=>'VACA_PROGRAMA', 'label'=>'Seleccionar Programa', 'data'=>['Ingenieria'=>'Ingenieria','Mercadeo'=>'Mercadeo']])
+			@include('widgets.forms.input', ['type'=>'select', 'column'=>4, 'name'=>'VACA_PROGRAMA', 'label'=>'Seleccionar Programa', 'data'=>['Ingenieria Sistemas'=>'Ingenieria Sistemas','Mercadeo'=>'Mercadeo',,'Tecnología en Sistemas'=>'Tecnología en Sistemas','Administración'=>'Administración','Arquitectura'=>'Arquitectura','Derecho'=>'Derecho','Diseño'=>'Diseño','Economía'=>'Economía','Física'=>'Física','Ingenieria Electronica'=>'Ingenieria Electronica','Licenciatura'=>'Licenciatura']])
 	</div>
 	<div class="row">		
 
