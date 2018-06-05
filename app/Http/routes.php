@@ -54,6 +54,7 @@ Route::get('getVacantesUbicacion', 'VacanteController@getVacantesUbicacion');
 Route::get('addPostulacion', 'VacanteController@addPostulacion');
 Route::get('validarUsuario', 'VacanteController@validarUsuario');
 Route::get('getVacantesUsuarios', 'VacanteController@getVacantesUsuarios');
+Route::get('delPostulacion', 'VacanteController@delPostulacion');
 
 //Route::get('validaHorario', 'AccesoController@validaHorario');
 

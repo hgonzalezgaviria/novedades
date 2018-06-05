@@ -34,7 +34,7 @@ class VacanteController extends Controller
 	public function __construct()
 	{
 		//parent::__construct();
-		$this->middleware('auth')->except(['getVacantes','getVacantesUbicacion','addPostulacion','validarUsuario','getVacantesUsuarios']);
+		$this->middleware('auth')->except(['getVacantes','getVacantesUbicacion','addPostulacion','validarUsuario','getVacantesUsuarios','delPostulacion']);
 
 	}
 
@@ -214,6 +214,7 @@ class VacanteController extends Controller
 				Postulacione::create([
 								'PROP_ID'=>$idUser,
 								'VACA_ID'=>$id,
+								'POST_CREADOPOR'=>'USERIONIC',
 								'POST_FECHA'=>Carbon::now(),								
 							]);
 						return json_encode(["success" => "Se  ha postulado a la Vacante"]); //Entra
@@ -278,6 +279,44 @@ class VacanteController extends Controller
 
 						])->where('PROPIETARIOS.PROP_ID', $user)
 						->get()->toJson();
+		
+	}
+
+		public function delPostulacion(Request $request)
+	{
+		
+
+			$id = $request->input('id');
+		$user = $request->input('idUsuario');
+
+
+
+			$postulacion = Postulacione::where('PROP_ID', $user)
+							->where('VACA_ID',$id)							
+							->get()->first();
+
+							//zPostulacioneController::destroy($postulacion['POST_ID']);
+
+								if(isset($postulacion)){
+
+									$postulacion = Postulacione::findOrFail($postulacion['POST_ID']);
+							        $postulacion->POST_ELIMINADOPOR = 'USERIONIC';
+							        $postulacion->POST_FECHAELIMINADO = Carbon::now();
+        							$postulacion->save();
+        //$postulacion->delete();
+
+									//PostulacioneController::destroy($postulacion['POST_ID']);
+
+								//app(\App\Http\Controllers\PostulacioneController::class)->destroy($postulacion['POST_ID']);
+									//dump($postulacion);
+									  //'user' => $user,
+						//$postulacion->delete();
+						return json_encode(["success" => 1]);
+							//return json_encode($postulacion);
+							
+						} 
+
+		return json_encode(["success" => 0]);
 		
 	}
 	
